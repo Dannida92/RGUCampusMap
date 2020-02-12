@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <title>RGU Campus Map</title>
     <link rel="stylesheet" href="assets/CSS/style.css">
     <link href='https://fonts.googleapis.com/css?family=Hind:400,300|Bangers' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href=assets/CSS/unsemantic-grid-responsive-tablet.css>
+
 </head>
+
+
 <body>
 
 <!--INTERFACE-->
@@ -51,16 +55,41 @@
     <!--MAIN START-->
 <main class="grid-container">
 
-
     <!--MAIN SECTION START-->
     <section class="grid-66">
 
         <!--GOOGLE MAPS START-->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d17328.399383927288!2d-2.1634449!3d57.1191103!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x488410483d2f0941%3A0x5d8969688e77366a!2sRobert%20Gordon%20University!5e0!3m2!1sen!2suk!4v1581521862057!5m2!1sen!2suk" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
+
+        <!--GOOGLE MAPS TRIAL 2-->
+
+    <div id="map"></div>
+
+    <script>
+        function initMap() {
+            var location = {lat: 57.119206, lng: -2.136063};
+            var map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 16,
+                center: location
+            });
+
+            var marker= new google.maps.Marker ({
+                position: location,
+                map: map
+
+            });
+        }
+    </script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key= AIzaSyAgCU8Eq0w2ezRGNWFag9sNnGtEe-bD5Sc&callback=initMap">
+    </script>
+    <!--GOOGLE MAPS TRIAL 2 END-->
+
         <!--GOOGLE MAPS END-->
 
+
+        <!-- MAIN SECTION END-->
     </section>
-    <!-- MAIN SECTION END-->
 
 
     <!--SIDEBAR START-->
